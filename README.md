@@ -21,7 +21,7 @@ If these scripts were useful to you, consider donating to support the Developer 
 
 ## Files
 
-- **`main.py`**: Main script for extracting metadata and building photo indexes
+- **`index.py`**: Main script for extracting metadata and building photo indexes
 - **`simple_search.py`**: Simple exact-coordinate photo search
 - **`advanced_search.py`**: Advanced radius-based photo search using the Haversine formula
 - **`requirements.txt`**: Python dependencies
@@ -32,7 +32,7 @@ If these scripts were useful to you, consider donating to support the Developer 
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/nunombispo/Photo-Library-EXIF-Metadata-Article
    cd Photo-Library-EXIF-Metadata-Article
    ```
 
@@ -57,7 +57,7 @@ If these scripts were useful to you, consider donating to support the Developer 
 First, create an index of your photos:
 
 ```bash
-python main.py
+python index.py
 ```
 
 This will:
@@ -107,10 +107,10 @@ radius_km = 10  # Change to your desired search radius
 
 ### Photo Directory
 
-In `main.py`, change the directory to scan:
+In `index.py`, change the directory to scan:
 
 ```python
-build_index(".")  # Current directory
+build_index("photos")
 # or
 build_index("path/to/your/photos")  # Custom directory
 ```
@@ -158,7 +158,7 @@ england-london-bridge.jpg,2023:06:15 14:30:22,51.5074,-0.1278,35.0,Canon EOS R5
 ### Search Results
 
 ```
-england-london-bridge.jpg 0.00 km away
+england-london-bridge.jpg 3.70 km away
 ```
 
 ## Troubleshooting
